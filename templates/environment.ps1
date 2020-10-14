@@ -1,0 +1,1 @@
+$env:PYTHONPATH = 'c:\GitHub\py.etl\templates'
