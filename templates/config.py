@@ -9,9 +9,7 @@ password=password
 """
 
 from configparser import ConfigParser
-#filename='c:/GitHub/py.etl/templates/config.ini'
-filename='config.ini'
-
+filename='c:/git/py.etl/templates/config.ini'
 
 def s1(filename=filename, section='s1'):
     parser = ConfigParser()

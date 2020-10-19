@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+message table {
+    repeated tuple row = 1;
+}
+
+message tuple {
+    int32   id = 1;
+    string	created_at = 2;
+    string	updated_at = 3;
+    string	uuid = 4;
+    string	url = 5;
+    string	name = 6;
+    string	description = 7;
+    string	image = 8;
+    string	number = 9;
+    string	duration_min = 10;
+    string	is_popular = 11;
+    string	class_id = 12;
+    string	subject_id = 13;
+    string	access_id = 14;
+    string  sfTableoid = 15;
+    string  sfXmin = 16;
+}

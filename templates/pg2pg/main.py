@@ -1,9 +1,14 @@
-import ss_import as ss
-import store_import as store
-import sql_exec as sql
+# import ss.data_import as ss
+# # import store.import as store
+import sql as sql
+# from templates.config import s1 as src
+
+
 
 def main():
-    ss.main()
+    # print(src())
+    # sql.chk_schema_stage()
+    pass
 
 if __name__ == "__main__":
     main()    
