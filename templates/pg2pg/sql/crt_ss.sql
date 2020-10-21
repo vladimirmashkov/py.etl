@@ -20,5 +20,7 @@ CREATE TABLE ss.S2_video_learningVideo (
 	sfPackageFlowId text NULL,
 	sfTableoid text NULL, 
 	sfXmin text NULL,
+	sfFormerDateTime text NULL,
+	sfChangeState char (1),
 	CONSTRAINT PK_ss_S2_video_learningVideo PRIMARY KEY (id)
 );

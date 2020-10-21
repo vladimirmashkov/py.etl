@@ -82,6 +82,7 @@ def chk_store():
 
 def crt_ss():
     sql_exec(open_file(sql_file('crt_ss')),'stage', 'crt_ss')
+    sql_exec(open_file(sql_file('crt_ss')),'dwh', 'crt_ss')
 
 def crt_temp():
     sql_exec(open_file(sql_file('crt_temp')),'stage', 'crt_temp')
