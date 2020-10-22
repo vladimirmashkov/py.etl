@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-message table {
-    repeated tuple row = 1;
+message import_s2_video_learningVideo {
+    repeated import_s2_video_learningVideo_tuple row = 1;
 }
 
-message tuple {
+message import_s2_video_learningVideo_tuple {
     int32   id = 1;
     string	created_at = 2;
     string	updated_at = 3;

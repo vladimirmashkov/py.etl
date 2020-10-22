@@ -3,9 +3,8 @@ from pg2pg.store import data_export as de
 # import pg2pg.ss.data_import as di
 
 def to_stage():
-    # di.main()
-    pass
-
+    di.main()
+    
 def to_dwh():
     de.main()
 

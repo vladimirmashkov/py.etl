@@ -55,7 +55,7 @@ def src_read():
     return df
 
 def save_to_bin(df_id, df):
-    table = pb2.table()
+    table = pb2.import_s2_video_learningVideo()
     for index, row in df.iterrows():
         # print(row)
         table.row.add (
@@ -96,7 +96,7 @@ def save_to_files(queue):
 
 def read_from_files(file_name):
     with open(file_name, "rb") as f:
-        table = pb2.table().FromString(f.read())
+        table = pb2.import_s2_video_learningVideo().FromString(f.read())
         dict_obj = MessageToDict(table)
         return dict_obj
 

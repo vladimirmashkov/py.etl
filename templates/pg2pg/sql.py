@@ -26,7 +26,7 @@ package_name = pkg.package_name
 sfPackageId = pkg.package_uuid
 
 
-def sql_exec(sql, direction_type, name=" "):
+def sql_exec(sql, direction_type, name=""):
     start = time.time()
     connection = None
     if direction_type=='stage':
@@ -51,9 +51,9 @@ def sql_exec(sql, direction_type, name=" "):
         connection.commit()
         cursor.close()
         connection.close()
-    if name!=" ":
-        name = " {name}.sql ".format(name=name)
-    print('sql execution -{name}spent time: {time} sec.'.format(time=round(time.time() - start, 2),name=name))
+    if name!="":
+        name = "{name}.sql ".format(name=name)
+    print('sql execution - {name}in {direction_type} spent time: {time} sec.'.format(time=round(time.time() - start, 2),name=name, direction_type=direction_type))
     pass
 
 def sql_file (name):
@@ -66,6 +66,7 @@ def open_file(file_name):
         content = f.read()
         content = prefix + content
         sql = content.replace('<null>sfPackageId</null>', '<null>{sfPackageId}</null>'.format(sfPackageId=sfPackageId))
+    # print (sql)
     return sql
 
 def chk_schema_stage():
@@ -103,11 +104,17 @@ def trf_temp_sd():
 def trf_temp_store():
     sql_exec(open_file(sql_file('trf_temp_store')),'stage', 'trf_temp_store')
 
+def trf_temp_store_dwh():
+    sql_exec(open_file(sql_file('trf_temp_store_dwh')),'dwh', 'trf_temp_store_dwh')
+
+def trf_store():
+    sql_exec(open_file(sql_file('trf_store')),'dwh', 'trf_store')
+
 def trn_clean_stage():
     sql_exec(open_file(sql_file('trn_clean_stage')),'stage', 'trn_clean_stage')
 
 def trn_clean_store():
-    sql_exec(open_file(sql_file('trn_clean_store')),'stage', 'trn_clean_store')
+    sql_exec(open_file(sql_file('trn_clean_store')),'dwh', 'trn_clean_store')
 
 def main():
     pass

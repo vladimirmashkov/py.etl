@@ -14,11 +14,11 @@ CREATE TABLE "temp".S2_video_learningVideo (
 	class_id int4 NULL,
 	subject_id int4 NULL,
 	access_id int4 NULL,
-	sfdatetime timestamptz null,
-	sfhash uuid null,
-	sfpackageid uuid null,
-	sfpackageflowid uuid null,
-	sftableoid int8 null,
-	sfxmin int8 null,
+	sfDateTime timestamptz null,
+	sfHash uuid null,
+	sfPackageId uuid null,
+	sfPackageFlowId uuid null,
+	sfTableoId int8 null,
+	sfXmin int8 null,
     CONSTRAINT PK_temp_S2_video_learningVideo PRIMARY KEY (id)
 );

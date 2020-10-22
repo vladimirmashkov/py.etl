@@ -1,6 +1,7 @@
-INSERT INTO "temp".s2_video_learningvideo
+INSERT INTO temp_store.s2_video_learningvideo
 (	id, created_at, updated_at, uuid, url, "name", description, image, "number", duration_min, is_popular, 
-	class_id, subject_id, access_id, sfDateTime, sfHash, sfPackageId, sfPackageFlowId, sfTableoId, sfXmin)
+	class_id, subject_id, access_id, 
+	sfDateTime, sfHash, sfPackageId, sfPackageFlowId, sfTableoId, sfXmin, sfFormerDateTime, sfChangeState)
 SELECT 	id, 
 		to_timestamp(nullif(created_at,'<null>sfPackageId</null>'), 'YYYY-MM-DD HH24:MI:SS.US') as created_at, 
 		to_timestamp(nullif(updated_at,'<null>sfPackageId</null>'), 'YYYY-MM-DD HH24:MI:SS.US')  as updated_at, 
@@ -20,5 +21,7 @@ SELECT 	id,
 		nullif (sfPackageId,'<null>sfPackageId</null>')::uuid as sfPackageId,  
 		nullif (sfPackageFlowId,'<null>sfPackageId</null>')::uuid as sfPackageFlowId,  
 		nullif (sfTableoId,'<null>sfPackageId</null>')::int8  as sfTableoId,  
-		nullif (sfXmin,'<null>sfPackageId</null>')::int8  as sfXmin 
+		nullif (sfXmin,'<null>sfPackageId</null>')::int8  as sfXmin,
+		to_timestamp(nullif(sfFormerDateTime,'<null>sfPackageId</null>'), 'YYYY-MM-DD HH24:MI:SS.US') as sfFormerDateTime,
+    	sfChangeState
 FROM ss.s2_video_learningvideo;
