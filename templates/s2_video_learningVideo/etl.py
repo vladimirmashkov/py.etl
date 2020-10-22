@@ -1,6 +1,6 @@
-from pg2pg.ss import data_import as di
-from pg2pg.store import data_export as de
-# import pg2pg.ss.data_import as di
+from s2_video_learningVideo.ss import data_import as di
+from s2_video_learningVideo.store import data_export as de
+# import s2_video_learningVideo.ss.data_import as di
 
 def to_stage():
     di.main()

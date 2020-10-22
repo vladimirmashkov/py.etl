@@ -3,7 +3,7 @@ from config import s2 as src
 from config import stage as stage
 from config import dwh as dwh
 
-import pg2pg.config as pkg
+import s2_video_learningVideo.config as pkg
 
 import time
 import psycopg2

@@ -18,8 +18,8 @@ from config import s2 as src
 from config import stage as stage
 from config import dwh as dwh
 
-import pg2pg.config as pkg
-from pg2pg.ss import data_import_pb2 as pb2
+import s2_video_learningVideo.config as pkg
+from s2_video_learningVideo.ss import data_import_pb2 as pb2
 
 
 sfPackageId = pkg.package_uuid
