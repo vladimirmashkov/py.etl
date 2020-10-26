@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS ss.S2_video_learningVideo CASCADE;
 CREATE TABLE ss.S2_video_learningVideo (
-	id int8 NULL, 
+	id int8 NOT NULL, 
 	created_at text NULL, 
 	updated_at text NULL, 
 	uuid text NULL, 

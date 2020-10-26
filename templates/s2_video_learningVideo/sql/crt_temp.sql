@@ -20,5 +20,7 @@ CREATE TABLE "temp".S2_video_learningVideo (
 	sfPackageFlowId uuid null,
 	sfTableoId int8 null,
 	sfXmin int8 null,
+	sfFormerDateTime timestamptz NULL,
+    sfChangeState char(1) null,
     CONSTRAINT PK_temp_S2_video_learningVideo PRIMARY KEY (id)
 );

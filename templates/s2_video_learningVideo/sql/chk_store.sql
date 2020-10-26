@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS store.S2_video_learningVideo (
 	sfPackageFlowId uuid null,
 	sfTableoId int8 null,
 	sfXmin int8 null,
-    sfFormerDateTime timestamptz NULL,
+	sfFormerDateTime timestamptz NULL,
     sfChangeState char(1) null,
     storeId bigserial not null constraint PK_store_S2_video_learningVideo primary key
 );
